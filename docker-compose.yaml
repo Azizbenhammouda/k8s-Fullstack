@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  db:
+    image: postgres
+    restart: always
+    shm_size: 128mb
+    environment:
+      POSTGRES_PASSWORD: example
+    
+  front:
+    build: ./frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      - back
+   
+  back:
+    build: ./backend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db

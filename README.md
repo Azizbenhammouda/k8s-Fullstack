@@ -9,10 +9,10 @@ This project demonstrates how to deploy a fullstack React frontend, Node.js back
 ## Project Structure
 
 fullstack-react/
-├─ backend/ # Node.js backend
-├─ frontend/ # React frontend
-├─ k8s/ # Kubernetes deployment and service YAMLs
-└─ docker-compose.yml # Optional for local Docker testing
+├── backend/          # Node.js backend
+├── frontend/         # React frontend
+├── k8s/              # Kubernetes deployment and service YAMLs
+└── docker-compose.yml  # Optional for local Docker testing
 
 ---
 

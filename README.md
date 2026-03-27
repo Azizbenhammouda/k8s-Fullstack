@@ -31,20 +31,32 @@ fullstack-react/
 ### Build Docker Images
 
 docker build -t fullstack-react-back ./backend
+
+
 docker build -t fullstack-react-front ./frontend
 
 ###  Load Images into Kind Cluster
 
 kind load docker-image fullstack-react-back --name fullstackapp-cluster
+
+
 kind load docker-image fullstack-react-front --name fullstackapp-cluster
 
 ### Deploy Kubernetes Resources
 
 kubectl apply -f k8s/postgres.yaml
+
+
 kubectl apply -f k8s/postgres-service.yaml
 
+
 kubectl apply -f k8s/backend.yaml
+
+
 kubectl apply -f k8s/backend-service.yaml
 
+
 kubectl apply -f k8s/frontend.yaml
+
+
 kubectl apply -f k8s/frontend-service.yaml
